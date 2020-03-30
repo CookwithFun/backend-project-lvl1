@@ -1,10 +1,12 @@
 {
-  "name": "backend-project-lvl1",
+  "name": "backend-project-lvl1_dm.knz",
   "version": "1.0.0",
   "description": "A beautiful mind",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=production babel src --out-dir dist",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,16 @@
   },
   "homepage": "https://github.com/CookwithFun/backend-project-lvl1#readme",
   "devDependencies": {
-    "eslint": "^6.8.0"
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.0",
+    "eslint": "^6.8.0",
+    "make": "^0.8.1"
+  },
+  "type": "module",
+  "dependencies": {},
+  "bin": {
+    "brain-games": "bin/brain-games.js"
   }
 }
