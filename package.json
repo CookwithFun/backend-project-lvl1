@@ -1,11 +1,10 @@
 {
-
   "name": "backend-project-lvl1_dm.knz",
   "version": "1.0.0",
   "description": "A beautiful mind",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "NODE_ENV=production babel src --out-dir dist",
     "prepublishOnly": "npm run build"
   },
@@ -25,12 +24,14 @@
     "@babel/node": "^7.8.7",
     "@babel/preset-env": "^7.9.0",
     "eslint": "^6.8.0",
+    "jest": "^25.2.4",
     "make": "^0.8.1",
     "readline-sync": "^1.4.10"
   },
   "dependencies": {},
-  "type" : "module",
+  "type": "module",
   "bin": {
     "brain-games": "bin/brain-games.js"
-  }
+  },
+  "files": "dist"
 }
