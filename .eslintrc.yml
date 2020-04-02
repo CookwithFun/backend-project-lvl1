@@ -8,6 +8,8 @@ env:
 extends: 'eslint:recommended'
   - 'airbnb-base'
   - 'plugin:jest/recommended'
+  - 'plugin:import/errors'
+  - 'plugin:import/warnings'
 globals:
   Atomics: readonly
   SharedArrayBuffer: readonly
@@ -15,9 +17,14 @@ parserOptions:
   ecmaVersion: 2018
   sourceType: module
 rules: {
+  import/no-unresolved: [2, {commonjs: true, amd: true}]
+    import/named: 2
+    import/namespace: 2
+    import/default: 2
+    import/export: 2
 
   no-console: 0
-    import/extensions: 0 # FIXME: remove when rule will be adjusted for new nodejs version
+    #import/extensions: 0 # FIXME: remove when rule will be adjusted for new nodejs version
 }
 
   plugins:
@@ -25,3 +32,4 @@ rules: {
     - jest
     # https://github.com/babel/eslint-plugin-babel
     - babel
+    - import
