@@ -34,14 +34,20 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.0",
     "jest": "^25.2.4",
+    "lodash": "^4.17.15",
     "make": "^0.8.1"
   },
   "dependencies": {
+    "esm": "^3.2.25",
     "node": "^13.12.0",
-    "readline-sync": "^1.4.10"
+    "readline-sync": "^1.4.10",
+    "lodash": "latest"
   },
   "type": "module",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-event": "bin/brain-games.js"
   }
+
+
 }

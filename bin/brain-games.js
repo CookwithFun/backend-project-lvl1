@@ -1,9 +1,18 @@
 #!/usr/bin/env node
 
 import {userName}  from '../src/index.js';
+import {getRandomInt, GuessNum}  from '../src/index.js';
 
 
-console.log ('Welcome to the Brain Games!');
+//NumberIsEven();
+//import {randomInt from "../src/index";
+//import {NumberIsEven} from "../src/index";
+//randomInt(10,20);
+
+console.log (GuessNum());
+
+
+
 
 
 
